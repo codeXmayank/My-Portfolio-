@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaReact,
   FaNodeJs,
@@ -9,7 +9,7 @@ import {
   FaGitAlt,
   FaFigma,
   FaDatabase,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
@@ -31,25 +31,38 @@ import {
   SiSupabase,
   SiJest,
   SiPostman,
-} from 'react-icons/si';
-import { HiX, HiExternalLink, HiCode, HiSparkles, HiChevronLeft, HiChevronRight, HiSearch } from 'react-icons/hi';
+} from "react-icons/si";
+import {
+  HiX,
+  HiExternalLink,
+  HiCode,
+  HiSparkles,
+  HiChevronLeft,
+  HiChevronRight,
+  HiSearch,
+} from "react-icons/hi";
 
 export const TECH_DATA = [
   // Frontend
   {
-    id: 'react',
-    name: 'React.js',
-    category: 'Frontend',
+    id: "react",
+    name: "React.js",
+    category: "Frontend",
     icon: FaReact,
-    color: '#00d4ff',
+    color: "#00d4ff",
     level: 95,
-    status: 'Expert / Daily Driver',
-    experience: '5+ Years',
-    tagline: 'Modern Declarative UI Architecture',
+    status: "Expert / Daily Driver",
+    experience: "2+ Years",
+    tagline: "Modern Declarative UI Architecture",
     description:
-      'My primary frontend powerhouse for crafting scalable, component-driven web applications. Deep expertise with Concurrent features, Suspense, custom Hooks, React 18/19 server actions, and high-performance render optimization.',
-    features: ['Concurrent Mode', 'Custom Hooks', 'Virtual DOM', 'Server Components', 'State Machines'],
-    projects: ['NexusBoard', 'CryptoVault', 'DataLens'],
+      "My primary frontend powerhouse for crafting scalable, component-driven web applications. Deep expertise with Concurrent features, Suspense, custom Hooks, React 18/19 server actions, and high-performance render optimization.",
+    features: [
+      "Concurrent Mode",
+      "Custom Hooks",
+      "Virtual DOM",
+      "Server Components",
+      "State Machines",
+    ],
     snippet: `// High-Performance Hook Pattern
 export const useRealtimeMetrics = (streamId: string) => {
   const [data, setData] = useState<Metric[]>([]);
@@ -60,22 +73,27 @@ export const useRealtimeMetrics = (streamId: string) => {
   });
   return { data };
 };`,
-    docs: 'https://react.dev',
+    docs: "https://react.dev",
   },
   {
-    id: 'nextjs',
-    name: 'Next.js',
-    category: 'Frontend',
+    id: "nextjs",
+    name: "Next.js",
+    category: "Frontend",
     icon: SiNextdotjs,
-    color: '#ffffff',
+    color: "#ffffff",
     level: 92,
-    status: 'Advanced Specialist',
-    experience: '4+ Years',
-    tagline: 'Enterprise Full-Stack React Framework',
+    status: "Advanced Specialist",
+    experience: "2+ Years",
+    tagline: "Enterprise Full-Stack React Framework",
     description:
-      'The foundation for production SaaS platforms. Extensive experience with App Router, hybrid rendering (SSR, SSG, ISR), Edge middleware, Server Actions, image/font streaming, and zero-bundle-size server components.',
-    features: ['App Router', 'Hybrid SSR/SSG', 'Edge Runtime', 'Server Actions', 'Turbopack'],
-    projects: ['CryptoVault', 'NexusBoard'],
+      "The foundation for production SaaS platforms. Extensive experience with App Router, hybrid rendering (SSR, SSG, ISR), Edge middleware, Server Actions, image/font streaming, and zero-bundle-size server components.",
+    features: [
+      "App Router",
+      "Hybrid SSR/SSG",
+      "Edge Runtime",
+      "Server Actions",
+      "Turbopack",
+    ],
     snippet: `// Server Action with optimistic validation
 export async function createTeamWorkspace(formData: FormData) {
   'use server';
@@ -88,23 +106,28 @@ export async function createTeamWorkspace(formData: FormData) {
   revalidatePath('/dashboard');
   return { success: true, id: workspace.id };
 }`,
-    docs: 'https://nextjs.org',
+    docs: "https://nextjs.org",
   },
-  
+
   {
-    id: 'tailwind',
-    name: 'Tailwind CSS',
-    category: 'Frontend',
+    id: "tailwind",
+    name: "Tailwind CSS",
+    category: "Frontend",
     icon: SiTailwindcss,
-    color: '#38bdf8',
+    color: "#38bdf8",
     level: 96,
-    status: 'Master',
-    experience: '4+ Years',
-    tagline: 'Rapid Precision Design Systems',
+    status: "Master",
+    experience: "2+ Years",
+    tagline: "Rapid Precision Design Systems",
     description:
-      'My design system tool of choice for building responsive, pixel-perfect, dark-mode and cyberpunk interfaces with custom tokens, arbitrary variants, fluid typography, and glassmorphism styling.',
-    features: ['Design Tokens', 'JIT Engine', 'Dark Mode Architecture', 'Micro-Interactions', 'Custom Plugins'],
-    projects: ['NexusBoard', 'CryptoVault', 'EcoTrack'],
+      "My design system tool of choice for building responsive, pixel-perfect, dark-mode and cyberpunk interfaces with custom tokens, arbitrary variants, fluid typography, and glassmorphism styling.",
+    features: [
+      "Design Tokens",
+      "JIT Engine",
+      "Dark Mode Architecture",
+      "Micro-Interactions",
+      "Custom Plugins",
+    ],
     snippet: `// Custom glassmorphism utility classes
 @layer utilities {
   .glass-card {
@@ -112,22 +135,27 @@ export async function createTeamWorkspace(formData: FormData) {
            shadow-[0_8px_32px_rgba(0,0,0,0.37)] hover:border-cyan-400/40;
   }
 }`,
-    docs: 'https://tailwindcss.com',
+    docs: "https://tailwindcss.com",
   },
   {
-    id: 'javascript',
-    name: 'JavaScript (ES6+)',
-    category: 'Frontend',
+    id: "javascript",
+    name: "JavaScript (ES6+)",
+    category: "Frontend",
     icon: SiJavascript,
-    color: '#f7df1e',
+    color: "#f7df1e",
     level: 96,
-    status: 'Master',
-    experience: '5+ Years',
-    tagline: 'Modern Asynchronous Engine Mastery',
+    status: "Master",
+    experience: "2+ Years",
+    tagline: "Modern Asynchronous Engine Mastery",
     description:
-      'Deep understanding of JavaScript runtime internals, V8 optimization, Event Loop phases, Web Workers, Generators, Promises, Closures, and prototype inheritance.',
-    features: ['Event Loop & Microtasks', 'Async / Await', 'Web Workers', 'Closures & Scopes', 'Prototypes'],
-    projects: ['All Projects'],
+      "Deep understanding of JavaScript runtime internals, V8 optimization, Event Loop phases, Web Workers, Generators, Promises, Closures, and prototype inheritance.",
+    features: [
+      "Event Loop & Microtasks",
+      "Async / Await",
+      "Web Workers",
+      "Closures & Scopes",
+      "Prototypes",
+    ],
     snippet: `// Concurrent worker batching
 const batchAsync = async (tasks, limit = 5) => {
   const results = [];
@@ -143,23 +171,28 @@ const batchAsync = async (tasks, limit = 5) => {
   }
   return Promise.all(results);
 };`,
-    docs: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    docs: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
- 
+
   {
-    id: 'redux',
-    name: 'Redux Toolkit',
-    category: 'Frontend',
+    id: "redux",
+    name: "Redux Toolkit",
+    category: "Frontend",
     icon: SiRedux,
-    color: '#764abc',
+    color: "#764abc",
     level: 86,
-    status: 'Advanced',
-    experience: '3+ Years',
-    tagline: 'Predictable Global State Container',
+    status: "Advanced",
+    experience: "2+ Years",
+    tagline: "Predictable Global State Container",
     description:
-      'Architecting resilient state stores for heavy SaaS web applications using RTK Slices, RTK Query cache management, optimistic updates, and custom middleware pipelines.',
-    features: ['RTK Query', 'Normalized Slices', 'Middleware Interceptors', 'Cache Invalidation', 'DevTools Debugging'],
-    projects: ['DataLens', 'InnoWave Dashboard'],
+      "Architecting resilient state stores for heavy SaaS web applications using RTK Slices, RTK Query cache management, optimistic updates, and custom middleware pipelines.",
+    features: [
+      "RTK Query",
+      "Normalized Slices",
+      "Middleware Interceptors",
+      "Cache Invalidation",
+      "DevTools Debugging",
+    ],
     snippet: `export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({ baseUrl: '/api/v1' }),
@@ -171,25 +204,29 @@ const batchAsync = async (tasks, limit = 5) => {
     }),
   }),
 });`,
-    docs: 'https://redux-toolkit.js.org',
+    docs: "https://redux-toolkit.js.org",
   },
- 
- 
+
   // Backend
   {
-    id: 'nodejs',
-    name: 'Node.js',
-    category: 'Backend',
+    id: "nodejs",
+    name: "Node.js",
+    category: "Backend",
     icon: FaNodeJs,
-    color: '#22c55e',
+    color: "#22c55e",
     level: 92,
-    status: 'Expert',
-    experience: '5+ Years',
-    tagline: 'Asynchronous Event-Driven Backend Engines',
+    status: "Expert",
+    experience: "2+ Years",
+    tagline: "Asynchronous Event-Driven Backend Engines",
     description:
-      'Designing low-latency RESTful and WebSocket backends, microservices architectures, stream processing, worker thread concurrency, and secure authorization systems.',
-    features: ['Event Loop Tuning', 'Stream Pipelines', 'Worker Threads', 'JWT / OAuth2 Auth', 'Clustered Servers'],
-    projects: ['NexusBoard', 'CryptoVault', 'DataLens API'],
+      "Designing low-latency RESTful and WebSocket backends, microservices architectures, stream processing, worker thread concurrency, and secure authorization systems.",
+    features: [
+      "Event Loop Tuning",
+      "Stream Pipelines",
+      "Worker Threads",
+      "JWT / OAuth2 Auth",
+      "Clustered Servers",
+    ],
     snippet: `// High-throughput streaming response
 import { pipeline } from 'stream/promises';
 import { createReadStream } from 'fs';
@@ -198,22 +235,27 @@ app.get('/api/telemetry/stream', async (req, res) => {
   res.setHeader('Content-Type', 'application/x-ndjson');
   await pipeline(createReadStream('./events.log'), transformToJson, res);
 });`,
-    docs: 'https://nodejs.org',
+    docs: "https://nodejs.org",
   },
   {
-    id: 'express',
-    name: 'Express.js',
-    category: 'Backend',
+    id: "express",
+    name: "Express.js",
+    category: "Backend",
     icon: SiExpress,
-    color: '#ffffff',
+    color: "#ffffff",
     level: 90,
-    status: 'Expert',
-    experience: '5+ Years',
-    tagline: 'Battle-Tested Minimalist HTTP Framework',
+    status: "Expert",
+    experience: "2+ Years",
+    tagline: "Battle-Tested Minimalist HTTP Framework",
     description:
-      'Structuring clean MVC and domain-driven APIs, middleware chains for rate limiting, input sanitization, security headers (Helmet), and error handling boundaries.',
-    features: ['Middleware Pipelines', 'Route Grouping', 'Error Boundaries', 'CORS & Rate Limiting', 'Zod Validation'],
-    projects: ['EcoTrack API', 'InnoWave Backend'],
+      "Structuring clean MVC and domain-driven APIs, middleware chains for rate limiting, input sanitization, security headers (Helmet), and error handling boundaries.",
+    features: [
+      "Middleware Pipelines",
+      "Route Grouping",
+      "Error Boundaries",
+      "CORS & Rate Limiting",
+      "Zod Validation",
+    ],
     snippet: `router.post('/checkout', rateLimiter, validate(checkoutSchema), async (req, res, next) => {
   try {
     const order = await orderService.create(req.body, req.user);
@@ -222,46 +264,55 @@ app.get('/api/telemetry/stream', async (req, res) => {
     next(err);
   }
 });`,
-    docs: 'https://expressjs.com',
+    docs: "https://expressjs.com",
   },
   {
-    id: 'python',
-    name: 'Python',
-    category: 'Backend',
+    id: "python",
+    name: "Python",
+    category: "Backend",
     icon: FaPython,
-    color: '#facc15',
+    color: "#facc15",
     level: 86,
-    status: 'Advanced',
-    experience: '4+ Years',
-    tagline: 'Data Processing, Automation & AI Services',
+    status: "Advanced",
+    experience: "2+ Years",
+    tagline: "Data Processing, Automation & AI Services",
     description:
-      'Developing AI-driven microservices with FastAPI and Django, NLP pipelines, data transformation with Pandas/NumPy, and integration with OpenAI and PyTorch models.',
-    features: ['FastAPI Async', 'Pydantic Schemas', 'NumPy / Pandas', 'Celery Background Tasks', 'AI Model Serving'],
-    projects: ['MindFlow AI Backend', 'SynthWave Music Engine'],
+      "Developing AI-driven microservices with FastAPI and Django, NLP pipelines, data transformation with Pandas/NumPy, and integration with OpenAI and PyTorch models.",
+    features: [
+      "FastAPI Async",
+      "Pydantic Schemas",
+      "NumPy / Pandas",
+      "Celery Background Tasks",
+      "AI Model Serving",
+    ],
     snippet: `@app.post("/api/nlp/analyze", response_model=SentimentResult)
 async def analyze_sentiment(payload: TextInput, db: Session = Depends(get_db)):
     embeddings = await model.generate_embedding(payload.text)
     prediction = classifier.predict(embeddings)
     return SentimentResult(score=prediction.score, label=prediction.label)`,
-    docs: 'https://python.org',
+    docs: "https://python.org",
   },
-  
 
   // Databases
   {
-    id: 'mongodb',
-    name: 'MongoDB',
-    category: 'Databases',
+    id: "mongodb",
+    name: "MongoDB",
+    category: "Databases",
     icon: SiMongodb,
-    color: '#10b981',
+    color: "#10b981",
     level: 90,
-    status: 'Expert',
-    experience: '4+ Years',
-    tagline: 'Flexible Document Database for Rapid Iteration',
+    status: "Expert",
+    experience: "2+ Years",
+    tagline: "Flexible Document Database for Rapid Iteration",
     description:
-      'Designing scalable document schemas, compound indexes, multi-stage aggregation pipelines for analytics, and managing replica sets with MongoDB Atlas.',
-    features: ['Aggregation Pipeline', 'Compound Indexes', 'Atlas Search', 'Change Streams', 'Replica Sets'],
-    projects: ['NexusBoard', 'PixelCraft Studios'],
+      "Designing scalable document schemas, compound indexes, multi-stage aggregation pipelines for analytics, and managing replica sets with MongoDB Atlas.",
+    features: [
+      "Aggregation Pipeline",
+      "Compound Indexes",
+      "Atlas Search",
+      "Change Streams",
+      "Replica Sets",
+    ],
     snippet: `// Aggregation pipeline for user productivity metrics
 db.tasks.aggregate([
   { $match: { teamId: ObjectId(teamId), completed: true } },
@@ -269,22 +320,27 @@ db.tasks.aggregate([
   { $sort: { total: -1 } },
   { $limit: 10 }
 ]);`,
-    docs: 'https://mongodb.com',
+    docs: "https://mongodb.com",
   },
   {
-    id: 'postgresql',
-    name: 'PostgreSQL',
-    category: 'Databases',
+    id: "postgresql",
+    name: "PostgreSQL",
+    category: "Databases",
     icon: SiPostgresql,
-    color: '#336791',
+    color: "#336791",
     level: 88,
-    status: 'Advanced',
-    experience: '3.5+ Years',
-    tagline: 'Robust Relational Integrity & Advanced Querying',
+    status: "Advanced",
+    experience: "1.5+ Years",
+    tagline: "Robust Relational Integrity & Advanced Querying",
     description:
-      'Relational schema design, ACID transactions, complex JOIN optimization, JSONB indexing for hybrid models, row-level security (RLS), and database migrations.',
-    features: ['ACID Transactions', 'JSONB Querying', 'Foreign Keys & Constraints', 'EXPLAIN ANALYZE', 'Connection Pooling'],
-    projects: ['TechNova SaaS', 'DataLens'],
+      "Relational schema design, ACID transactions, complex JOIN optimization, JSONB indexing for hybrid models, row-level security (RLS), and database migrations.",
+    features: [
+      "ACID Transactions",
+      "JSONB Querying",
+      "Foreign Keys & Constraints",
+      "EXPLAIN ANALYZE",
+      "Connection Pooling",
+    ],
     snippet: `CREATE TABLE user_workspaces (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES users(id) ON DELETE CASCADE,
@@ -293,26 +349,30 @@ db.tasks.aggregate([
   created_at TIMESTAMPTZ DEFAULT now()
 );
 CREATE INDEX idx_workspace_user ON user_workspaces(user_id);`,
-    docs: 'https://postgresql.org',
+    docs: "https://postgresql.org",
   },
 
-
   // Cloud & DevOps
- 
+
   {
-    id: 'git',
-    name: 'Git & GitHub Actions',
-    category: 'Cloud & DevOps',
+    id: "git",
+    name: "Git & GitHub Actions",
+    category: "Cloud & DevOps",
     icon: FaGitAlt,
-    color: '#f05032',
+    color: "#f05032",
     level: 94,
-    status: 'Master',
-    experience: '5+ Years',
-    tagline: 'Version Control & Automated CI/CD Pipelines',
+    status: "Master",
+    experience: "1+ Years",
+    tagline: "Version Control & Automated CI/CD Pipelines",
     description:
-      'Git Flow workflows, interactive rebasing, automated testing and deployment pipelines with GitHub Actions, branch protection rules, and semantic versioning.',
-    features: ['GitHub Actions CI/CD', 'Interactive Rebase', 'Release Automation', 'PR Code Reviews', 'Semantic Versioning'],
-    projects: ['All Projects'],
+      "Git Flow workflows, interactive rebasing, automated testing and deployment pipelines with GitHub Actions, branch protection rules, and semantic versioning.",
+    features: [
+      "GitHub Actions CI/CD",
+      "Interactive Rebase",
+      "Release Automation",
+      "PR Code Reviews",
+      "Semantic Versioning",
+    ],
     snippet: `name: CI/CD Pipeline
 on: [push, pull_request]
 jobs:
@@ -321,23 +381,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm test && npm run build`,
-    docs: 'https://git-scm.com',
+    docs: "https://git-scm.com",
   },
- 
+
   {
-    id: 'postman',
-    name: 'Postman',
-    category: 'Tools & Testing',
+    id: "postman",
+    name: "Postman",
+    category: "Tools & Testing",
     icon: SiPostman,
-    color: '#ff6c37',
+    color: "#ff6c37",
     level: 90,
-    status: 'Advanced',
-    experience: '4+ Years',
-    tagline: 'API Prototyping, Mocking & Automated Collections',
+    status: "Advanced",
+    experience: "1+ Years",
+    tagline: "API Prototyping, Mocking & Automated Collections",
     description:
-      'Writing automated API test assertions, managing multi-environment variables (local, staging, prod), generating mock servers, and publishing OpenAPI documentation.',
-    features: ['Automated Test Scripts', 'Environment Variables', 'Mock Servers', 'OpenAPI Export', 'Collection Runners'],
-    projects: ['All APIs'],
+      "Writing automated API test assertions, managing multi-environment variables (local, staging, prod), generating mock servers, and publishing OpenAPI documentation.",
+    features: [
+      "Automated Test Scripts",
+      "Environment Variables",
+      "Mock Servers",
+      "OpenAPI Export",
+      "Collection Runners",
+    ],
+
     snippet: `// Postman collection test script
 pm.test("Status code is 200 OK", function () {
     pm.response.to.have.status(200);
@@ -346,35 +412,44 @@ pm.test("Response contains valid auth token", function () {
     const json = pm.response.json();
     pm.expect(json.token).to.be.a('string');
 });`,
-    docs: 'https://postman.com',
+    docs: "https://postman.com",
   },
 ];
 
-const CATEGORIES = ['All Tech', 'Frontend', 'Backend', 'Databases', 'Cloud & DevOps', 'Tools & Testing'];
+const CATEGORIES = [
+  "All Tech",
+  "Frontend",
+  "Backend",
+  "Databases",
+  "Cloud & DevOps",
+  "Tools & Testing",
+];
 
 const TechStackExplorer = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Tech');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("All Tech");
+  const [searchQuery, setSearchQuery] = useState("");
   const [activeTech, setActiveTech] = useState(null);
 
   // Close modal on escape key
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         setActiveTech(null);
       }
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   const filteredTechs = TECH_DATA.filter((tech) => {
     const matchesCategory =
-      selectedCategory === 'All Tech' || tech.category === selectedCategory;
+      selectedCategory === "All Tech" || tech.category === selectedCategory;
     const matchesSearch =
       tech.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       tech.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tech.features.some((f) => f.toLowerCase().includes(searchQuery.toLowerCase()));
+      tech.features.some((f) =>
+        f.toLowerCase().includes(searchQuery.toLowerCase()),
+      );
     return matchesCategory && matchesSearch;
   });
 
@@ -401,13 +476,15 @@ const TechStackExplorer = () => {
   };
 
   return (
-    <section id="tech-stack" className="py-24 bg-[#0a0a0f] relative overflow-hidden">
+    <section
+      id="tech-stack"
+      className="py-24 bg-[#0a0a0f] relative overflow-hidden"
+    >
       {/* Background Decorative Ambient Gradients */}
       <div className="absolute top-1/4 -left-40 w-96 h-96 rounded-full bg-[#00d4ff]/08 blur-[140px] pointer-events-none" />
       <div className="absolute bottom-1/3 -right-40 w-96 h-96 rounded-full bg-[#7c3aed]/12 blur-[150px] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
-        
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -425,7 +502,8 @@ const TechStackExplorer = () => {
             My <span className="gradient-text">Tech Stack</span> & Architecture
           </h2>
           <p className="text-gray-400 text-base md:text-lg">
-            Click on any technology icon below to open its detailed specification card, implementation architecture, and code samples.
+            Click on any technology icon below to open its detailed
+            specification card, implementation architecture, and code samples.
           </p>
 
           {/* Search & Category Filter Controls */}
@@ -438,8 +516,8 @@ const TechStackExplorer = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 backdrop-blur-md ${
                     selectedCategory === cat
-                      ? 'bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white shadow-[0_0_20px_rgba(0,212,255,0.4)] scale-105'
-                      : 'bg-white/5 text-gray-400 border border-white/10 hover:border-[#00d4ff]/40 hover:text-white'
+                      ? "bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white shadow-[0_0_20px_rgba(0,212,255,0.4)] scale-105"
+                      : "bg-white/5 text-gray-400 border border-white/10 hover:border-[#00d4ff]/40 hover:text-white"
                   }`}
                 >
                   {cat}
@@ -475,14 +553,17 @@ const TechStackExplorer = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.25, delay: Math.min(index * 0.02, 0.3) }}
+                  transition={{
+                    duration: 0.25,
+                    delay: Math.min(index * 0.02, 0.3),
+                  }}
                   onClick={() => setActiveTech(tech)}
                   whileHover={{ y: -6, scale: 1.03 }}
                   whileTap={{ scale: 0.96 }}
-                  className={`relative group cursor-pointer rounded-2xl p-5 backdrop-blur-xl border transition-all duration-300 flex flex-col items-center text-center select-none overflow-hidden ${
+                  className={`relative group cursor-pointer rounded-2xl px-5 py-4 backdrop-blur-xl border transition-all duration-300 flex flex-col items-center text-center select-none overflow-hidden ${
                     isSelected
-                      ? 'bg-white/[0.12] border-[#00d4ff] shadow-[0_0_30px_rgba(0,212,255,0.4)]'
-                      : 'bg-white/[0.03] border-white/10 hover:border-white/25 hover:bg-white/[0.06] hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]'
+                      ? "bg-white/[0.12] border-[#00d4fd] shadow-[0_0_30px_rgba(0,212,255,0.4)]"
+                      : "bg-white/[0.03] border-white/10 hover:border-white/25 hover:bg-white/[0.06] hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
                   }`}
                   style={{
                     borderTop: `3px solid ${tech.color}`,
@@ -496,7 +577,7 @@ const TechStackExplorer = () => {
 
                   {/* Icon Box */}
                   <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-3.5 transition-transform duration-300 group-hover:scale-110 shadow-md"
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-3.5 transition-transform duration-300 group-hover:scale-110 shadow-md"
                     style={{
                       background: `radial-gradient(circle at 35% 30%, ${tech.color}25, rgba(15, 15, 25, 0.8))`,
                       border: `1px solid ${tech.color}44`,
@@ -530,11 +611,13 @@ const TechStackExplorer = () => {
 
         {filteredTechs.length === 0 && (
           <div className="text-center py-16 text-gray-400">
-            <p className="text-lg">No technologies found matching "{searchQuery}"</p>
+            <p className="text-lg">
+              No technologies found matching "{searchQuery}"
+            </p>
             <button
               onClick={() => {
-                setSearchQuery('');
-                setSelectedCategory('All Tech');
+                setSearchQuery("");
+                setSelectedCategory("All Tech");
               }}
               className="mt-4 px-4 py-2 rounded-xl bg-white/10 text-white text-sm hover:bg-white/20 transition-all"
             >
@@ -563,8 +646,8 @@ const TechStackExplorer = () => {
               initial={{ opacity: 0, scale: 0.9, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: 'spring', stiffness: 350, damping: 28 }}
-              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#0d111a] border border-white/20 rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.85)] z-10"
+              transition={{ type: "spring", stiffness: 350, damping: 28 }}
+              className="relative w-full max-w-3xl max-h-[80vh] overflow-y-auto bg-[#0d111a] border border-white/20 rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.85)] z-10"
               style={{
                 borderTop: `4px solid ${activeTech.color}`,
                 boxShadow: `0 0 50px ${activeTech.color}25, 0 25px 60px rgba(0,0,0,0.85)`,
@@ -638,13 +721,22 @@ const TechStackExplorer = () => {
 
                 {/* Level / Status Pill */}
                 <div className="sm:text-right bg-black/40 p-3 rounded-2xl border border-white/5 shrink-0">
-                  <div className="text-[11px] font-mono text-gray-400 uppercase">Proficiency</div>
+                  <div className="text-[11px] font-mono text-gray-400 uppercase">
+                    Proficiency
+                  </div>
                   <div className="text-lg font-bold text-white flex items-center gap-2 sm:justify-end">
-                    <span style={{ color: activeTech.color }}>{activeTech.level}%</span>
-                    <span className="text-xs text-gray-400 font-normal">({activeTech.status})</span>
+                    <span style={{ color: activeTech.color }}>
+                      {activeTech.level}%
+                    </span>
+                    <span className="text-xs text-gray-400 font-normal">
+                      ({activeTech.status})
+                    </span>
                   </div>
                   <div className="text-xs text-gray-500 font-mono mt-0.5">
-                    Experience: <span className="text-gray-300">{activeTech.experience}</span>
+                    Experience:{" "}
+                    <span className="text-gray-300">
+                      {activeTech.experience}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -654,7 +746,7 @@ const TechStackExplorer = () => {
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${activeTech.level}%` }}
-                  transition={{ duration: 0.6, ease: 'easeOut' }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="h-full rounded-full"
                   style={{
                     background: `linear-gradient(90deg, #00d4ff, ${activeTech.color})`,
@@ -684,7 +776,10 @@ const TechStackExplorer = () => {
                       key={feature}
                       className="px-3 py-1 text-xs font-mono rounded-lg bg-white/5 border border-white/10 text-gray-200 flex items-center gap-1.5"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full" style={{ background: activeTech.color }} />
+                      <span
+                        className="w-1.5 h-1.5 rounded-full"
+                        style={{ background: activeTech.color }}
+                      />
                       {feature}
                     </span>
                   ))}
@@ -699,7 +794,9 @@ const TechStackExplorer = () => {
                       <HiCode className="text-[#00ff88]" />
                       Implementation Syntax Sample
                     </h4>
-                    <span className="text-[11px] font-mono text-gray-500">Production Pattern</span>
+                    <span className="text-[11px] font-mono text-gray-500">
+                      Production Pattern
+                    </span>
                   </div>
                   <div className="rounded-xl overflow-hidden border border-white/10 bg-black/60 font-mono text-xs p-4 text-gray-200 overflow-x-auto leading-relaxed shadow-inner">
                     <pre>
@@ -712,15 +809,17 @@ const TechStackExplorer = () => {
               {/* Footer: Projects Used & Docs Link */}
               <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-xs font-mono text-gray-400">Featured in:</span>
-                  {activeTech.projects.map((proj) => (
+                  <span className="text-xs font-mono text-gray-400">
+                    Featured in:
+                  </span>
+                  {/* {activeTech.projects.map((proj) => (
                     <span
                       key={proj}
                       className="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-[#00d4ff]/10 text-[#00d4ff] border border-[#00d4ff]/30"
                     >
                       {proj}
                     </span>
-                  ))}
+                  ))} */}
                 </div>
 
                 <a

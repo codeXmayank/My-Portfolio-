@@ -215,9 +215,9 @@ export const projects = [
 // ===== Experience Section =====
 export const experiences = [
   {
-    role: "Senior Full-Stack Developer",
-    company: "TechNova Solutions",
-    period: "Jan 2024 – Present",
+    role: "Demo Card ",
+    company: "I have no Experience as a Profession",
+    period: "Jan 2025 – Present",
     description:
       "Leading the development of a SaaS platform serving 100K+ users. Architecting microservices with Node.js and React, implementing CI/CD pipelines, and mentoring a team of 6 developers.",
     technologies: ["React", "Node.js", "AWS", "Docker", "PostgreSQL"],
@@ -225,7 +225,7 @@ export const experiences = [
   },
   {
     role: "Full-Stack Developer",
-    company: "PixelCraft Studios",
+    company: "As Localhost",
     period: "Jun 2022 – Dec 2023",
     description:
       "Built responsive web applications for enterprise clients. Developed a real-time collaboration tool that improved team productivity by 40%. Led frontend architecture decisions.",

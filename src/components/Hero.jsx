@@ -8,6 +8,7 @@ import HeroBackgroundBubbles from "./HeroBackgroundBubbles";
 const Hero = () => {
   const titles = [
     "Full-Stack Developer",
+    "Backend Developer",
     "UI/UX Designer",
     "Tech Innovator",
     "Open Source Contributor",

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { experiences } from '../data/portfolioData';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { experiences } from "../data/portfolioData";
 
 const TimelineItem = ({ exp, index }) => {
   const [ref, inView] = useInView({
@@ -15,16 +15,18 @@ const TimelineItem = ({ exp, index }) => {
     <div
       ref={ref}
       className={`mb-12 flex justify-between items-center w-full ${
-        isEven ? 'md:flex-row-reverse' : ''
+        isEven ? "md:flex-row-reverse" : ""
       }`}
     >
       <div className="hidden md:block w-5/12" />
-      
+
       <div className="z-20 flex items-center order-1 bg-[#0a0a0f] shadow-xl w-8 h-8 rounded-full border-4 border-[#7c3aed] shadow-[0_0_15px_rgba(124,58,237,0.5)]" />
-      
+
       <motion.div
         initial={{ opacity: 0, x: isEven ? 50 : -50 }}
-        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: isEven ? 50 : -50 }}
+        animate={
+          inView ? { opacity: 1, x: 0 } : { opacity: 0, x: isEven ? 50 : -50 }
+        }
         transition={{ duration: 0.5, delay: 0.2 }}
         className="order-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 w-full md:w-5/12 hover:border-[#00d4ff]/50 transition-colors duration-300"
       >
@@ -34,13 +36,13 @@ const TimelineItem = ({ exp, index }) => {
             {exp.period}
           </span>
         </div>
-        
+
         <h4 className="text-lg font-semibold text-white mb-4">{exp.company}</h4>
-        
+
         <p className="text-gray-400 text-sm leading-relaxed mb-6">
           {exp.description}
         </p>
-        
+
         <div className="flex flex-wrap gap-2">
           {exp.technologies.map((tag) => (
             <span
@@ -58,7 +60,10 @@ const TimelineItem = ({ exp, index }) => {
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-[#0a0a0f] relative overflow-hidden">
+    <section
+      id="experience"
+      className="py-20 bg-[#0a0a0f] relative overflow-hidden"
+    >
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
