@@ -71,8 +71,9 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text text-transparent bg-clip-text bg-gradient-to-r from-[#00d4ff] via-[#7c3aed] to-[#00ff88]">
+          <h2 className="flex flex-col  text-4xl md:text-5xl font-bold gradient-text text-transparent bg-clip-text bg-gradient-to-r from-[#00d4ff] via-[#7c3aed] to-[#00ff88]">
             Work Experience
+            <span className="text-lg mt-3">Fresher (Demo Card)</span>
           </h2>
         </motion.div>
 
